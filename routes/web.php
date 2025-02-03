@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.dashboard');
 });
+
+Route::get("/student/create",[StudentController::class,'create']);
+Route::post("/student/store",[StudentController::class,'store']);
+Route::get("/student",[StudentController::class,'index']);

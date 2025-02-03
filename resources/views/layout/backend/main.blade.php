@@ -39,11 +39,13 @@
 		<!--page-wrapper-->
 		<div class="page-wrapper">
 			<!--page-content-wrapper-->
+
 			<div class="page-content-wrapper">
 				<div class="page-content">
 					@yield('page-content')
 				</div>
 			</div>
+            
 			<!--end page-content-wrapper-->
 		</div>
 		<!--end page-wrapper-->
