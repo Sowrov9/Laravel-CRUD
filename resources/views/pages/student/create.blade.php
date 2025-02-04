@@ -1,7 +1,7 @@
 @extends('layout.backend.main');
 @section('page-content')
 <h1>Create Student Details</h1>
-<form action="/student/store" method="POST" >
+<form action="/student/store" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
         <label>Name</label>
@@ -31,13 +31,14 @@
             <span style="color: red">{{$message}}</span>
         @enderror
     </div>
-    {{-- <div class="form-group">
+    <div class="form-group">
         <label>Photo</label>
         <input type="file" name="photo" value="{{old('photo')}}" class="form-control">
+        
         @error('photo')
             <span style="color: red">{{$message}}</span>
         @enderror
-    </div> --}}
+    </div>
     <button type="submit">Create</button>
 </form>
 @endsection

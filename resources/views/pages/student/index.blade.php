@@ -2,6 +2,9 @@
 @section('page-content')
 
 <div class="card">
+    @if (session('success'))
+        <div class="alert alert-success">{{session('success')}}</div>
+    @endif
     <div class="card-body">
         <div>
             <h5>Student Details</h5>
@@ -17,6 +20,7 @@
                             <th scope="col">Roll</th>
                             <th scope="col">Phone</th>
                             <th scope="col">Address</th>
+                            <th scope="col">Photo</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -27,9 +31,10 @@
                             <td>{{$student->roll}}</td>
                             <td>{{$student->phone}}</td>
                             <td>{{$student->address}}</td>
+                            <td><img width="50" src="{{ asset('photo') }}/{{$student->photo}}" alt=""></td>
                             <td>
-                                <a href="/student/edit" class="btn btn-primary">Edit</a>
-                                <a href="/student/delete" class="btn btn-danger">Delete</a>
+                                <a href="{{url("/student/edit/$student->id")}}" class="btn btn-primary">Edit</a>
+                                <a href="{{url("/student/delete/$student->id")}}" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
 
