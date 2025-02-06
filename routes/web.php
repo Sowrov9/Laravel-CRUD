@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,3 +23,6 @@ Route::get("/student/create",[StudentController::class,'create']);
 Route::post("/student/store",[StudentController::class,'store']);
 Route::get("/student",[StudentController::class,'index']);
 Route::get("/student/edit/{id}",[StudentController::class,'edit']);
+
+
+Route::resource('customer', CustomerController::class);
