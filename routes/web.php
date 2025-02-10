@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,6 @@ Route::get("/student/edit/{id}",[StudentController::class,'edit']);
 
 
 Route::resource('customer', CustomerController::class);
+
+
+Route::get("/invoice",[InvoiceController::class,'index']);
