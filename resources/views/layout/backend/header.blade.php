@@ -1,3 +1,4 @@
+
 <header class="top-header">
     <nav class="navbar navbar-expand">
         <div class="left-topbar d-flex align-items-center">
@@ -294,7 +295,7 @@
                     <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;" data-toggle="dropdown">
                         <div class="media user-box align-items-center">
                             <div class="media-body user-info">
-                                <p class="user-name mb-0">Jessica Doe</p>
+                                <p class="user-name mb-0">{{Auth::user()->name}}</p>
                                 <p class="designattion mb-0">Available</p>
                             </div>
                             <img src="https://via.placeholder.com/110x110" class="user-img" alt="user avatar">
@@ -310,7 +311,7 @@
                                 class="bx bx-wallet"></i><span>Earnings</span></a>
                         <a class="dropdown-item" href="javascript:;"><i
                                 class="bx bx-cloud-download"></i><span>Downloads</span></a>
-                        <div class="dropdown-divider mb-0"></div>	<a class="dropdown-item" href="javascript:;"><i
+                        <div class="dropdown-divider mb-0"></div>	<a class="dropdown-item" href="{{url('/logout')}}"><i
                                 class="bx bx-power-off"></i><span>Logout</span></a>
                     </div>
                 </li>
