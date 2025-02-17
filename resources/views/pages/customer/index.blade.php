@@ -19,7 +19,9 @@
                         <th scope="col">Email</th>
                         <th scope="col">Phone</th>
                         <th scope="col">Address</th>
+                        @if (auth()->user()->isAdmin())
                         <th scope="col">Action</th>
+                        @endif
                     </tr>
                 </thead>
                 <tbody>
@@ -30,6 +32,7 @@
                             <td>{{$customer->email}}</td>
                             <td>{{$customer->phone}}</td>
                             <td>{{$customer->address}}</td>
+                            @if (auth()->user()->isAdmin())
                             <td>
                                 <a href="{{url("customer/{$customer->id}")}}" class="btn btn-primary">Show</a>
                                 <a href="{{url("customer/{$customer->id}/edit")}}" class="btn btn-secondary">Edit</a>
@@ -39,6 +42,8 @@
                                     <button class="btn btn-success">Delete</button>
                                </form>
                             </td>
+                            @endif
+
                         </tr>
                     @empty
                         <div>Data not found</div>

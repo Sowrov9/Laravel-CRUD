@@ -298,7 +298,7 @@
                                 <p class="user-name mb-0">{{Auth::user()->name}}</p>
                                 <p class="designattion mb-0">Available</p>
                             </div>
-                            <img src="https://via.placeholder.com/110x110" class="user-img" alt="user avatar">
+                            <img src="assets\images\user\{{Auth::user()->photo}}" class="user-img" alt="user avatar">
                         </div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">	<a class="dropdown-item" href="javascript:;"><i

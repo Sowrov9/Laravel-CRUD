@@ -99,7 +99,7 @@
 									<div class="form-group">
 										<label>Password</label>
 										<div class="input-group" id="show_hide_password">
-											<input class="form-control border-right-0" type="password" name="password" value="{{old('password')}}" required autocomplete="password" id="email">
+											<input class="form-control border-right-0" type="password" name="password" required autocomplete="password" id="email">
 											<div class="input-group-append">	<a href="javascript:;" class="input-group-text bg-transparent border-left-0"><i class='bx bx-hide'></i></a>
 											</div>
 										</div>
@@ -107,7 +107,7 @@
 									<div class="form-group">
 										<label>Confirm Password</label>
 										<div class="input-group" id="show_hide_password">
-											<input class="form-control border-right-0" type="password" name="password_confirmation" value="{{old('password_confirmation')}}" id="password_confirmation">
+											<input class="form-control border-right-0" type="password" name="password_confirmation" id="password_confirmation">
 											<div class="input-group-append">	<a href="javascript:;" class="input-group-text bg-transparent border-left-0"><i class='bx bx-hide'></i></a>
 											</div>
 										</div>

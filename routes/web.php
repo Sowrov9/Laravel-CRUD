@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\RoomController;
 use App\Http\Controllers\StudentController;
 /*
 |--------------------------------------------------------------------------
@@ -34,12 +35,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get("/student/create",[StudentController::class,'create']);
-Route::post("/student/store",[StudentController::class,'store']);
-Route::get("/student",[StudentController::class,'index']);
-Route::get("/student/edit/{id}",[StudentController::class,'edit']);
+Route::get("/student/create",[StudentController::class,'create'])->middleware("Manager");
+Route::post("/student/store",[StudentController::class,'store'])->middleware("Manager");
+Route::get("/student",[StudentController::class,'index'])->middleware("Manager");
+Route::get("/student/edit/{id}",[StudentController::class,'edit'])->middleware("Manager");
 
 
 Route::resource('customer', CustomerController::class);
-
+// Route::resource('customer', CustomerController::class)->middleware("Admin");
 require __DIR__.'/auth.php';

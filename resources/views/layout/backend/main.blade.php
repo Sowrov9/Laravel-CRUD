@@ -5,9 +5,9 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	<title>Syndash - Bootstrap4 Admin Template</title>
+	<title>Sleep Coma Lodge</title>
 	<!--favicon-->
-	<link rel="icon" href="{{asset('assets')}}/images/favicon-32x32.png" type="image/png" />
+	<link rel="icon" href="{{asset('assets')}}/images/Sleep_Coma_Lodge_logo.png" type="image/png" />
 	<!-- Vector CSS -->
 	<link href="{{asset('assets')}}/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
 	<!--plugins-->
@@ -45,7 +45,7 @@
 					@yield('page-content')
 				</div>
 			</div>
-            
+
 			<!--end page-content-wrapper-->
 		</div>
 		<!--end page-wrapper-->
